@@ -9,17 +9,14 @@ name=MAIN_URL.split("=")
 n=int(name[-1])
 try:
     yt = YouTube(MAIN_URL)
-    print(yt)
 except:
     exceptions.check(MAIN_URL)
 resval = res_fps.res(yt)
 temp=yt
 for i in range (1,n+1):
-    print("hi")
     URL=MAIN_URL.replace(name[-1], str(i))
     try:
         yt = YouTube(URL)
-        print(yt)
     except:
         exceptions.check(URL)
     video = yt.streams.filter(file_extension="mp4",resolution=resval).first()
