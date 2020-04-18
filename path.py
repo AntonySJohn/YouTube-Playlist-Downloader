@@ -1,7 +1,8 @@
 import os
 from pytube import YouTube
 def mkdir(obj,playlistname="",fileformat='.mp4'):
-    title = obj.title
+    print("Enter title")
+    title = input()
     print("Would you prefer a custom download directory?(Y/N)")
     customdir = input()
     if(customdir=='Y' or customdir=='y'):
